@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adventurer's Loot</title>
+  <style>
+    body {
+      background: url('https://cdn.midjourney.com/429d9aa6-8fde-4a10-9219-f75650f6b27a/0_2.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Cinzel', serif;
+      color: #f5f5dc;
+      text-shadow: 2px 2px 4px #000;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 1rem 0;
+      text-align: center;
+      color: gold;
+      text-shadow: 3px 3px 6px #000;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin: 1rem 0;
+      text-align: center;
+    }
+    a {
+      text-decoration: none;
+      color: #f5f5dc;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      border: 2px solid #f5f5dc;
+      border-radius: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      transition: all 0.3s ease-in-out;
+    }
+    a:hover {
+      background: gold;
+      color: black;
+      border-color: black;
+      transform: scale(1.1);
+    }
+    audio {
+      width: 100%;
+      max-width: 400px;
+      margin: 0.5rem 0;
+      outline: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    footer {
+      position: absolute;
+      bottom: 1rem;
+      font-size: 0.9rem;
+      text-align: center;
+      width: 100%;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>IOs Dreams</h1>
+  <ul>
+    <script>
+      const files = ["part01.m4a", "part02.m4a", "part03.m4a", "part04.m4a"];
+      files.forEach(file => {
+        document.write(`
+          <li>
+            <a href="${file}" download>RIP this Audio File from IOs Brain ${file}</a>
+            <br>
+            <audio controls>
+              <source src="${file}" type="audio/mp4">
+              Your browser does not support the audio element.
+            </audio>
+          </li>
+        `);
+      });
+    </script>
+  </ul>
+  <footer>May your rolls be natural 20s and your loot plentiful!</footer>
+</body>
+</html>
